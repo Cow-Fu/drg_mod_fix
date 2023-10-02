@@ -40,6 +40,15 @@ jobs:
           target: ${{ matrix.platform.target }}
           args: "--release"
           strip: true
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Development Build"
+          files: |
+            *.zip
+            *.tar.gz
 # name: Build
 # on: [push]
 # env:
