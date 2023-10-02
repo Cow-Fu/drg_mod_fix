@@ -57,4 +57,5 @@ jobs:
           BIN_RELEASE_VERSIONED="${PROJECT_NAME}-${{ github.ref_name }}-${{ matrix.name }}${BIN_SUFFIX}"
  
           # Move the built binary where you want it
+          mkdir bin
           mv "${BIN_OUTPUT}" "./bin/${BIN_RELEASE}"
