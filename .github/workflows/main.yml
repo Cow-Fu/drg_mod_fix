@@ -2,7 +2,7 @@ name: Build
 on: [push]
 env:
   # The project name specified in your Cargo.toml
-  PROJECT_NAME: <insert-name>
+  PROJECT_NAME: drg_mod_fix
 jobs:
   build:
     # Set the job to run on the platform specified by the matrix below
