@@ -40,7 +40,8 @@ jobs:
           target: ${{ matrix.platform.target }}
           args: "--release"
           strip: true
-      - uses: "marvinpinto/action-automatic-releases@latest"
+      - name: Automatic Release With Assets
+        uses: ianlapham/release-and-build@v1 
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "latest"
